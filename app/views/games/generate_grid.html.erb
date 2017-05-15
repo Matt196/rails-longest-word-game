@@ -1,0 +1,18 @@
+<div class='container'>
+  <blockquote class="blockquote">
+    <p class="mb-0">Find the longuest word using the following letters : <%= @grid.join(', ') %></p>
+    <footer class="blockquote-footer">The game master</footer>
+  </blockquote>
+</div>
+<div class="container">
+  <form class="form-inline" action="score">
+    <div class="form-group">
+      <label for="What's your guess?"></label>
+      <input type="text" class="form-control large" name='trial' placeholder="Try me">
+      <input type="hidden" name='grid' value="<%= @grid.join() %>">
+      <input type="hidden" name='start_time' value="<%= @start_time %>">
+      <input type="submit" class="btn btn-primary btn-large" value="Play">
+    </div>
+  </form>
+</div>
+
